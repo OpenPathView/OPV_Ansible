@@ -41,7 +41,7 @@
     pip3 install opencv-python
 
     cd /home/opv/
-    git clone https://github.com/OpenPathView/OpenSfM.git
+    git clone https://github.com/mapillary/OpenSfM.git
     cd OpenSfM
     pip3 install -r requirements.txt
     python3 setup.py build
