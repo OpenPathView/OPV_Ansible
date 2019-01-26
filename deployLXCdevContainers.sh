@@ -71,7 +71,7 @@ echo Done
 
 echo ------------------------------------
 echo "Add opv_master line in /etc/host"
-lineOpvMaster=`cat /etc/hosts | grep opv_master -n | awk '{print $1}' FS=":"`
+lineOpvMaster=`cat /etc/hosts | sed "s/#.*//g" | grep opv_master -n | awk '{print $1}' FS=":"`
 
 for i in $lineOpvMaster
 do
