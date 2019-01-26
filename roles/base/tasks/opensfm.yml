@@ -39,13 +39,12 @@
   shell: |
     source /home/opv/venvs/opv/bin/activate
     pip3 install opencv-python
-
     cd /home/opv/
-    git clone https://github.com/mapillary/OpenSfM.git
+    git clone --recursive https://github.com/mapillary/OpenSfM.git
     cd OpenSfM
-    pip3 install -r requirements.txt
-    python3 setup.py build
+    pip3 install -r requirements.txt  && \
+    python3 setup.py build  && \
     python3 setup.py install
-    exit 0
+    exit $?
   args:
     executable: /bin/bash
